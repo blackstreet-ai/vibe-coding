@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function AssetClass() {
   return (
-    <div className="bg-white dark:bg-[#1c1d25] rounded-lg p-6 shadow-sm dark:shadow-none transition-colors">
+    <div className="bg-white dark:bg-[#1c1d25] rounded-lg p-6 shadow-sm dark:shadow-none transition-colors h-full flex flex-col">
       <h2 className="text-gray-900 dark:text-white text-lg font-medium mb-4 transition-colors">Asset Class</h2>
-      <div className="relative w-[200px] h-[200px] mx-auto">
+      <div className="relative w-[200px] h-[200px] mx-auto flex-grow flex items-center justify-center">
         <svg className="w-full h-full" viewBox="0 0 100 100">
           {/* Background circle */}
           <circle

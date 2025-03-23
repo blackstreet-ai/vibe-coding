@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#15161d] text-gray-900 dark:text-white transition-colors">
       <Sidebar />
-      <div className="ml-16 p-6">
-        <header className="flex justify-between items-center mb-6">
+      <div className={`ml-12 lg:ml-48 p-4 sm:p-6 transition-all duration-300`}>
+        <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-6">
           <div className="relative">
             <input
               type="search"
               placeholder="search"
-              className="bg-gray-100 dark:bg-[#1c1d25] rounded-lg px-4 py-2 text-sm text-gray-600 dark:text-gray-400 focus:outline-none w-64 transition-colors"
+              className="bg-gray-100 dark:bg-[#1c1d25] rounded-lg px-4 py-2 text-sm text-gray-600 dark:text-gray-400 focus:outline-none w-full sm:w-64 transition-colors"
             />
           </div>
           <div className="flex items-center gap-4">
@@ -29,19 +29,23 @@ export default function Home() {
           </div>
         </header>
 
-        <main className="grid grid-cols-12 gap-6">
+        <main className="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-4 sm:gap-6">
           {/* Total Assets Chart */}
-          <div className="col-span-8 transition-colors">
-            <TotalAssets />
+          <div className="col-span-1 sm:col-span-6 lg:col-span-8">
+            <div className="h-full">
+              <TotalAssets />
+            </div>
           </div>
 
           {/* Asset Class */}
-          <div className="col-span-4 transition-colors">
-            <AssetClass />
+          <div className="col-span-1 sm:col-span-6 lg:col-span-4">
+            <div className="h-full">
+              <AssetClass />
+            </div>
           </div>
 
           {/* Crypto Cards */}
-          <div className="col-span-12 grid grid-cols-4 gap-6">
+          <div className="col-span-1 sm:col-span-6 lg:col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <CryptoCard symbol="DASH" price="0.083 EUR" change={-1.93} miniChart="down" />
             <CryptoCard symbol="ETH" price="1,091 EUR" change={-1.14} miniChart="down" />
             <CryptoCard symbol="LTC" price="197.48 EUR" change={-0.44} miniChart="down" />
@@ -49,13 +53,13 @@ export default function Home() {
           </div>
 
           {/* Bottom Row */}
-          <div className="col-span-4 transition-colors">
+          <div className="col-span-1 sm:col-span-6 lg:col-span-4 transition-colors">
             <RecentDocuments />
           </div>
-          <div className="col-span-4 transition-colors">
+          <div className="col-span-1 sm:col-span-6 lg:col-span-4 transition-colors">
             <ActiveUsers />
           </div>
-          <div className="col-span-4 transition-colors">
+          <div className="col-span-1 sm:col-span-6 lg:col-span-4 transition-colors">
             <Calendar />
           </div>
         </main>
