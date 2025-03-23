@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TotalAssets() {
   return (
-    <div className="bg-white dark:bg-[#1c1d25] rounded-lg p-6 shadow-sm dark:shadow-none transition-colors">
+    <div className="bg-white dark:bg-[#1c1d25] rounded-lg p-6 shadow-sm dark:shadow-none transition-colors h-full">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-gray-900 dark:text-white text-lg font-medium transition-colors">Total Assets</h2>
         <select className="bg-transparent text-gray-600 dark:text-gray-400 text-sm border-none outline-none transition-colors">
@@ -14,7 +14,7 @@ export default function TotalAssets() {
       <div className="text-2xl text-gray-900 dark:text-white mb-4 transition-colors">
         4,553,215
       </div>
-      <div className="h-[200px] relative">
+      <div className="h-[300px] relative">
         {/* We'll implement the actual chart with a charting library */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#ff4b6e10] dark:from-[#ff4b6e20] to-transparent rounded transition-colors">
           <div className="w-full h-full relative">
